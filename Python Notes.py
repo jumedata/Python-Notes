@@ -1,35 +1,23 @@
-#!/usr/bin/env python
-# coding: utf-8
+# COMMENTS IN PYTHON
+# Python only has a type of comments: single line comments which uses # as the beginnig of the comment. 
+# Some people argue that multine comments can be done by using triple quotation marks as follows:
+*"""
 
-# ## COMMENTS IN PYTHON
+*multiline*
+
+*commets*
 # 
-# Python only has a type of comments: single line comments which uses # as the beginnig of the comment. Some people argue that multine comments can be done by using triple quotation marks as follows:
-# 
-# *"""*
-# 
-# *multiline*
-# 
-# *commets*
-# 
-# *"""""*
-# 
-# However this is interpreted as long string by the interpreter and it is not skipped as single line comments. This type of coments are used to document things suchs as functions
-# 
+*"""""*
+# However this is interpreted as long string by the interpreter and it is not skipped as single line comments.
+# This type of coments are used to document things suchs as functions
+
 # The **only way** to insert comments in Python is shown as follows:
-
-# In[14]:
-
 
 # This is a single line comment
 
 
-# ## USEFUL FUNCTIONS
-# 
-# ### TYPE OF A VARIABLE
-
-# In[16]:
-
-
+# USEFUL FUNCTIONS
+# TYPE OF A VARIABLE
 x = 14
 type(x) # returns the type of a variable
 
