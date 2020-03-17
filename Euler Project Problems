@@ -1,0 +1,94 @@
+# PROBLEM 1
+suma=0
+for i in range(1,1000):
+    if i%3 == 0 or i%5 == 0:
+        suma=suma+i
+    else:
+        continue
+suma
+
+# PROBLEM 2 - A
+def fibo_series (max_value):
+    fibo_list=[1,2]
+    i=0
+    
+    while fibo_list[i]+fibo_list[i+1] < max_value:
+        fibo_list.append(fibo_list[i]+fibo_list[i+1])
+        i+=1
+    
+    return fibo_list
+    
+    # PROBLEM 2 - B
+new_list=fibo_series(4000000)
+evensum=0
+for i in new_list:
+    if i%2 == 0:
+        evensum=evensum+i
+    else:
+        continue
+evensum
+
+# PROBLEM 3
+
+def check_prime(num):
+    if num==1 or num==0:
+        return False
+    elif num==2:
+        return True
+    else:
+        for i in range(2,round((num**0.5))+1):
+            if num%i == 0:
+                return False
+            else:
+                continue
+        return True
+
+def max_pfactor (num):
+    list_factors=[]
+    divisor=3;
+    
+    for i in range(3,round(((num/2)+1)/10000),2):
+        if num%i == 0 and check_prime(i):
+            list_factors.append(i)
+        else:
+            continue
+    return max(list_factors)
+    
+    # PROBLEM 4
+max_prod=0
+
+for x in range(100,1000):
+    for y in range(100,1000):
+        result=x*y
+        r_result=int(str(result)[::-1])
+        if result == r_result and result > max_prod:
+            max_prod = result
+        else:
+            continue
+max_prod
+        
+#create list from 100 to 999        
+#read first number
+#multiply number by each number on list and store result
+#take result and create another variable with reversed number
+#determine if result and reversed result are equal
+#if result is greater than previous store
+
+#a = 123*235 #123*234
+#b=str(a)
+#c=int(b[::-1])
+#c
+
+#PROBLEM 5
+
+def min_mul():
+    count=0
+    for i in range(20,500000000,2):
+        for x in range (1,21):
+            if i%x != 0:
+                count+=1
+                break
+            elif x == 20 and count==0 and i%x ==0:
+                return i
+        count=0
+            
